@@ -3,7 +3,7 @@ FROM alpine:3.10.2
 WORKDIR /app
 RUN apk add --update --upgrade python3
 COPY app.py .
-ENTRYPOINT ["python3", "app.py"]
+ENTRYPOINT ["python3", "-u", "app.py"]
 
 ARG BUILD_DATE
 ARG VCS_REF
