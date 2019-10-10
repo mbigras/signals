@@ -6,7 +6,7 @@ import sys
 
 def shutdown(signal_num, frame):
     print('received signal {}'.format(signal_num))
-    print ('exiting...')
+    print ('exiting')
     sys.exit()
 
 def receive_signal(signal_num, frame):
@@ -31,7 +31,7 @@ if __name__ == '__main__':
     signal.signal(signal.SIGALRM, receive_signal)
     signal.signal(signal.SIGTERM, shutdown)
 
-    # output current process id
+    print('starting version {}'.format(open('VERSION').read().strip()))
     print('pid {}'.format(os.getpid()))
     print('args {}'.format(sys.argv[1:]))
 
