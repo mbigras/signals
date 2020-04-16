@@ -1,0 +1,6 @@
+FROM alpine:3.10.2
+
+WORKDIR /app
+RUN apk add --update --upgrade python3 bash
+COPY entrypoint.sh app.py VERSION /app/
+ENTRYPOINT /app/entrypoint.sh
