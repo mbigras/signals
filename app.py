@@ -31,7 +31,6 @@ if __name__ == '__main__':
     signal.signal(signal.SIGALRM, receive_signal)
     signal.signal(signal.SIGTERM, shutdown)
 
-    print('starting version {}'.format(open('VERSION').read().strip()))
     print('pid {}'.format(os.getpid()))
     print('args {}'.format(sys.argv[1:]))
 
